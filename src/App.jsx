@@ -96,7 +96,7 @@ const Portfolio = () => {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "971505367089"; // Your WhatsApp number
-    const message = "i want to get in touch with you";
+    const message = "Hello Annet, Let's get in touch!";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
