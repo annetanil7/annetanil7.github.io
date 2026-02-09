@@ -683,33 +683,33 @@ const Portfolio = () => {
       )}
 
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${headerVisible ? 'translate-y-0' : '-translate-y-full'} bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-2xl`}>
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6 flex items-center justify-between gap-2 md:gap-0">
-          <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="text-sm md:text-xl lg:text-2xl font-bold tracking-widest hover:text-purple-400 transition-colors text-white whitespace-nowrap">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-6 flex items-center justify-between gap-1 sm:gap-2 md:gap-0 min-h-14 sm:min-h-16 md:min-h-20">
+          <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="text-xs sm:text-sm md:text-xl lg:text-2xl font-bold tracking-widest hover:text-purple-400 transition-colors text-white whitespace-nowrap flex-shrink-0">
             ANNET
           </button>
           
-          <div className="flex md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-2 md:gap-3">
+          <div className="flex md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-1 sm:gap-2 md:gap-3 flex-shrink-0">
             <div className="group relative hidden sm:block">
-              <button onClick={() => { setCurrentPage('about'); window.scrollTo(0, 0); }} className="nav-icon-button h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-3 px-3 md:px-4 shadow-lg hover:shadow-xl">
-                <div className="icon-inner flex-shrink-0"><User size={16} className="text-white" /></div>
+              <button onClick={() => { setCurrentPage('about'); window.scrollTo(0, 0); }} className="nav-icon-button h-9 sm:h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 shadow-lg hover:shadow-xl">
+                <div className="icon-inner flex-shrink-0"><User size={14} className="text-white" /></div>
                 <span className="label-tooltip text-white flex-1 text-center text-xs md:text-sm">About</span>
               </button>
             </div>
             <div className="group relative hidden sm:block">
-              <button onClick={() => { setCurrentPage('contact'); window.scrollTo(0, 0); }} className="nav-icon-button h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-3 px-3 md:px-4 shadow-lg hover:shadow-xl">
-                <div className="icon-inner flex-shrink-0"><Mail size={16} className="text-white" /></div>
+              <button onClick={() => { setCurrentPage('contact'); window.scrollTo(0, 0); }} className="nav-icon-button h-9 sm:h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 shadow-lg hover:shadow-xl">
+                <div className="icon-inner flex-shrink-0"><Mail size={14} className="text-white" /></div>
                 <span className="label-tooltip text-white flex-1 text-center text-xs md:text-sm">Contact</span>
               </button>
             </div>
             <div className="group relative">
-              <button onClick={handleWhatsAppClick} className="nav-icon-button h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2 md:gap-3 px-3 md:px-4 shadow-lg hover:shadow-xl">
-                <div className="icon-inner flex-shrink-0"><MessageCircle size={16} className="text-white" /></div>
+              <button onClick={handleWhatsAppClick} className="nav-icon-button h-9 sm:h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 md:gap-3 px-2 sm:px-3 md:px-4 shadow-lg hover:shadow-xl flex-shrink-0">
+                <div className="icon-inner flex-shrink-0"><MessageCircle size={14} className="text-white" /></div>
                 <span className="label-tooltip text-white flex-1 text-center text-xs md:text-sm whitespace-nowrap">Get In Touch</span>
               </button>
             </div>
           </div>
 
-          <button onClick={handleWhatsAppClick} className="hidden md:block px-6 py-3 bg-white/10 hover:bg-white hover:text-black rounded-xl font-semibold transition-all duration-300 border border-white/20 text-white text-sm">
+          <button onClick={handleWhatsAppClick} className="hidden md:block px-5 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white hover:text-black rounded-xl font-semibold transition-all duration-300 border border-white/20 text-white text-xs md:text-sm flex-shrink-0">
             Get In Touch
           </button>
         </div>
