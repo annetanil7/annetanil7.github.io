@@ -683,8 +683,8 @@ const Portfolio = () => {
       )}
 
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${headerVisible ? 'translate-y-0' : '-translate-y-full'} bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-2xl`}>
-        <div className="max-w-7xl mx-auto px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-6 flex items-center justify-between gap-0.5 sm:gap-1.5 md:gap-0 h-12 sm:h-14 md:h-20">
-          <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="text-xs sm:text-xs md:text-xl lg:text-2xl font-bold tracking-widest hover:text-purple-400 transition-colors text-white whitespace-nowrap flex-shrink-0">
+        <div className="max-w-7xl mx-auto px-2 sm:px-3 md:px-6 lg:px-8 xl:px-12 py-2 sm:py-3 md:py-5 lg:py-6 xl:py-7 flex items-center justify-between gap-0.5 sm:gap-1.5 md:gap-0 h-12 sm:h-14 md:h-16 lg:h-18 xl:h-20">
+          <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="text-xs sm:text-xs md:text-lg lg:text-2xl xl:text-3xl font-bold tracking-widest hover:text-purple-400 transition-colors text-white whitespace-nowrap flex-shrink-0\">
             ANNET
           </button>
           
@@ -709,7 +709,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <button onClick={handleWhatsAppClick} className="hidden md:block px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white hover:text-black rounded-lg md:rounded-xl font-semibold transition-all duration-300 border border-white/20 text-white text-xs md:text-sm flex-shrink-0">
+          <button onClick={handleWhatsAppClick} className="hidden md:block px-4 md:px-6 lg:px-8 xl:px-10 py-2 md:py-3 lg:py-4 xl:py-5 bg-white/10 hover:bg-white hover:text-black rounded-lg md:rounded-xl font-semibold transition-all duration-300 border border-white/20 text-white text-xs md:text-sm lg:text-base xl:text-lg flex-shrink-0">
             Get In Touch
           </button>
         </div>
@@ -733,18 +733,18 @@ const Portfolio = () => {
               <div className="absolute top-2/3 right-1/3 w-2 h-2 particle particle-1" style={{top: '65%', right: '20%'}}></div>
 
               <div className="relative z-10 max-w-6xl mx-auto px-3 sm:px-4 md:px-6 text-center py-4 sm:py-0">
-                <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[140px] font-black mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight sm:leading-none tracking-tight">
+                <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[160px] 2xl:text-[200px] font-black mb-3 sm:mb-4 md:mb-6 lg:mb-8 2xl:mb-12 leading-tight sm:leading-none tracking-tight">
                   <span className="inline-block relative group">
                     <span className="hero-text-professional hero-digital-word block">DIGITAL</span>
                     <span className="hero-text-professional hero-designer-word block">DESIGNER</span>
                     <div className="hero-line-premium group-hover:animate-none"></div>
                   </span>
                 </h1>
-                <p className="text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl mb-4 sm:mb-6 md:mb-8 lg:mb-12 max-w-4xl mx-auto hero-description text-gray-300 px-1 sm:px-2">
+                <p className="text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl mb-4 sm:mb-6 md:mb-8 lg:mb-12 2xl:mb-16 max-w-4xl 2xl:max-w-5xl mx-auto hero-description text-gray-300 px-1 sm:px-2">
                   Turning Your Ideas Into Code, Design Into Experiences, And Curiosity Into Innovation.
                 </p>
                 <button 
-                  className="hero-button magnetic-button inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-lg rounded-full border border-purple-500/50 font-semibold text-xs sm:text-xs md:text-base lg:text-lg hover:from-purple-600/60 hover:to-pink-600/60 transition-all duration-300"
+                  className="hero-button magnetic-button inline-flex items-center gap-1.5 sm:gap-2 md:gap-3 px-3 sm:px-5 md:px-8 lg:px-10 xl:px-12 py-2 sm:py-3 md:py-4 lg:py-5 xl:py-6 bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-lg rounded-full border border-purple-500/50 font-semibold text-xs sm:text-xs md:text-base lg:text-lg xl:text-xl hover:from-purple-600/60 hover:to-pink-600/60 transition-all duration-300"
                   onMouseMove={handleMagneticMove}
                   onMouseLeave={handleMagneticLeave}
                   style={{ transform: `translate(${magneticButtonPos.x}px, ${magneticButtonPos.y}px)` }}
@@ -759,8 +759,8 @@ const Portfolio = () => {
               <div className="absolute top-0 left-0 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-900/10 rounded-full blur-3xl"></div>
               <div className="max-w-7xl mx-auto relative z-10">
-                <p className="text-purple-400 text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8 scroll-animate">SERVICES</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+                <p className="text-purple-400 text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8 lg:mb-12 scroll-animate">SERVICES</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
                   {[
                     { title: "Websites", desc: "Responsive websites and dashboards for your business.", img: "https://framerusercontent.com/images/R6tZri3DeU1y7vYp1lvvIRx34hw.png?width=880&height=664" },
                     { title: "Apps", desc: "Designing mobile apps for iOS and Android users.", img: "https://framerusercontent.com/images/Wv5ApfmhBWVowNlSdTibfFf7n4.png?width=782&height=664" },
@@ -768,11 +768,11 @@ const Portfolio = () => {
                   ].map((service, idx) => (
                     <div key={idx} className="group scroll-animate card-hover relative overflow-hidden rounded-2xl bg-zinc-950/40 border border-white/5 hover:border-purple-500/50 transition-all duration-500 cursor-pointer backdrop-blur-sm hover:bg-zinc-950/80" style={{ animationDelay: `${idx * 0.1}s` }}>
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-pink-600/0 group-hover:from-purple-600/10 group-hover:to-pink-600/10 transition-all duration-500"></div>
-                      <div className="p-4 sm:p-6 md:p-8 relative z-10">
-                        <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 group-hover:bg-clip-text transition-all duration-300">{service.title}</h3>
-                        <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-4 sm:mb-6 group-hover:text-gray-300 transition-colors">{service.desc}</p>
+                      <div className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 relative z-10">
+                        <h3 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 lg:mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 group-hover:bg-clip-text transition-all duration-300">{service.title}</h3>
+                        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-400 mb-4 sm:mb-6 lg:mb-8 group-hover:text-gray-300 transition-colors">{service.desc}</p>
                       </div>
-                      <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 relative z-10">
+                      <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 relative z-10">
                         <div className="aspect-[4/3] overflow-hidden rounded-xl bg-zinc-900">
                           <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                         </div>
@@ -790,7 +790,7 @@ const Portfolio = () => {
                   From writing clean code to exploring cybersecurity and cloud technologies, I enjoy building things that <span className="text-white font-semibold">look good, work smart, and solve real problems</span>.
                 </p>
                 
-                <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
+                <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 mb-8 sm:mb-12 lg:mb-16 xl:mb-20">
                   {[
                     { number: counters.years, label: "Years of experience", suffix: "+" },
                     { number: counters.certs, label: "Certifications", suffix: "+" },
@@ -798,10 +798,10 @@ const Portfolio = () => {
                     { number: counters.hours, label: "Training hours", suffix: "+" }
                   ].map((stat, idx) => (
                     <div key={idx} className="text-center group">
-                      <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold mb-2 sm:mb-4 lg:mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                         {stat.number}{stat.suffix}
                       </div>
-                      <div className="text-xs sm:text-sm md:text-base text-gray-400">{stat.label}</div>
+                      <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-400">{stat.label}</div>
                     </div>
                   ))}
                 </div>
