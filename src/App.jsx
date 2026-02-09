@@ -732,19 +732,19 @@ const Portfolio = () => {
               <div className="absolute bottom-1/3 left-1/4 w-2 h-2 particle particle-3" style={{bottom: '25%', left: '10%'}}></div>
               <div className="absolute top-2/3 right-1/3 w-2 h-2 particle particle-1" style={{top: '65%', right: '20%'}}></div>
 
-              <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-                <h1 className="text-8xl md:text-[160px] lg:text-[200px] font-black mb-8 leading-none tracking-tight">
+              <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[160px] xl:text-[200px] font-black mb-6 sm:mb-8 leading-none tracking-tight">
                   <span className="inline-block relative group">
                     <span className="hero-text-professional hero-digital-word block">DIGITAL</span>
                     <span className="hero-text-professional hero-designer-word block">DESIGNER</span>
                     <div className="hero-line-premium group-hover:animate-none"></div>
                   </span>
                 </h1>
-                <p className="text-2xl md:text-3xl mb-12 max-w-4xl mx-auto hero-description text-gray-300">
+                <p className="text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl mb-8 sm:mb-12 max-w-4xl mx-auto hero-description text-gray-300 px-2">
                   Turning Your Ideas Into Code, Design Into Experiences, And Curiosity Into Innovation.
                 </p>
                 <button 
-                  className="hero-button magnetic-button inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-lg rounded-full border border-purple-500/50 font-semibold text-lg hover:from-purple-600/60 hover:to-pink-600/60 transition-all duration-300"
+                  className="hero-button magnetic-button inline-flex items-center gap-2 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-lg rounded-full border border-purple-500/50 font-semibold text-xs sm:text-sm md:text-lg hover:from-purple-600/60 hover:to-pink-600/60 transition-all duration-300"
                   onMouseMove={handleMagneticMove}
                   onMouseLeave={handleMagneticLeave}
                   style={{ transform: `translate(${magneticButtonPos.x}px, ${magneticButtonPos.y}px)` }}
@@ -755,12 +755,12 @@ const Portfolio = () => {
               </div>
             </section>
 
-            <section className="py-20 px-6 bg-black relative overflow-hidden">
+            <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-black relative overflow-hidden">
               <div className="absolute top-0 left-0 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-900/10 rounded-full blur-3xl"></div>
               <div className="max-w-7xl mx-auto relative z-10">
-                <p className="text-purple-400 text-sm uppercase tracking-wider mb-8 scroll-animate">SERVICES</p>
-                <div className="grid md:grid-cols-3 gap-8">
+                <p className="text-purple-400 text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8 scroll-animate">SERVICES</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
                   {[
                     { title: "Websites", desc: "Responsive websites and dashboards for your business.", img: "https://framerusercontent.com/images/R6tZri3DeU1y7vYp1lvvIRx34hw.png?width=880&height=664" },
                     { title: "Apps", desc: "Designing mobile apps for iOS and Android users.", img: "https://framerusercontent.com/images/Wv5ApfmhBWVowNlSdTibfFf7n4.png?width=782&height=664" },
@@ -768,11 +768,11 @@ const Portfolio = () => {
                   ].map((service, idx) => (
                     <div key={idx} className="group scroll-animate card-hover relative overflow-hidden rounded-2xl bg-zinc-950/40 border border-white/5 hover:border-purple-500/50 transition-all duration-500 cursor-pointer backdrop-blur-sm hover:bg-zinc-950/80" style={{ animationDelay: `${idx * 0.1}s` }}>
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-pink-600/0 group-hover:from-purple-600/10 group-hover:to-pink-600/10 transition-all duration-500"></div>
-                      <div className="p-8 relative z-10">
-                        <h3 className="text-3xl font-bold mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 group-hover:bg-clip-text transition-all duration-300">{service.title}</h3>
-                        <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors">{service.desc}</p>
+                      <div className="p-4 sm:p-6 md:p-8 relative z-10">
+                        <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 group-hover:bg-clip-text transition-all duration-300">{service.title}</h3>
+                        <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-4 sm:mb-6 group-hover:text-gray-300 transition-colors">{service.desc}</p>
                       </div>
-                      <div className="px-8 pb-8 relative z-10">
+                      <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 relative z-10">
                         <div className="aspect-[4/3] overflow-hidden rounded-xl bg-zinc-900">
                           <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                         </div>
@@ -783,14 +783,14 @@ const Portfolio = () => {
               </div>
             </section>
 
-            <section className="py-20 px-6 bg-gradient-to-b from-black to-zinc-900">
+            <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-zinc-900">
               <div className="max-w-6xl mx-auto">
-                <h2 className="text-5xl md:text-7xl font-bold mb-8">Why Me?</h2>
-                <p className="text-2xl md:text-3xl text-gray-300 mb-12 leading-relaxed">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8">Why Me?</h2>
+                <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-gray-300 mb-8 sm:mb-12 leading-relaxed">
                   From writing clean code to exploring cybersecurity and cloud technologies, I enjoy building things that <span className="text-white font-semibold">look good, work smart, and solve real problems</span>.
                 </p>
                 
-                <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
                   {[
                     { number: counters.years, label: "Years of experience", suffix: "+" },
                     { number: counters.certs, label: "Certifications", suffix: "+" },
@@ -798,55 +798,55 @@ const Portfolio = () => {
                     { number: counters.hours, label: "Training hours", suffix: "+" }
                   ].map((stat, idx) => (
                     <div key={idx} className="text-center group">
-                      <div className="text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                         {stat.number}{stat.suffix}
                       </div>
-                      <div className="text-gray-400">{stat.label}</div>
+                      <div className="text-xs sm:text-sm md:text-base text-gray-400">{stat.label}</div>
                     </div>
                   ))}
                 </div>
 
                 <div className="text-center">
-                  <button onClick={() => setCurrentPage('about')} className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
+                  <button onClick={() => setCurrentPage('about')} className="group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-2 sm:py-4 bg-white text-black rounded-full font-semibold text-xs sm:text-sm md:text-base hover:bg-purple-500 hover:text-white transition-all duration-300">
                     Know More
-                    <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+                    <ArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
                   </button>
                 </div>
               </div>
             </section>
 
-            <section className="py-20 px-6 bg-black overflow-hidden">
-              <div className="max-w-7xl mx-auto mb-12">
-                <p className="text-purple-400 text-sm uppercase tracking-wider mb-4">Testimonials</p>
-                <h2 className="text-5xl md:text-6xl font-bold">A few words</h2>
+            <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-black overflow-hidden">
+              <div className="max-w-7xl mx-auto mb-8 sm:mb-12">
+                <p className="text-purple-400 text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">Testimonials</p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">A few words</h2>
               </div>
               
               <div className="relative">
-                <div className="flex gap-6 animate-scroll">
+                <div className="flex gap-4 sm:gap-6 animate-scroll">
                   {[...testimonials, ...testimonials].map((testimonial, idx) => (
-                    <div key={idx} className="flex-shrink-0 w-80 card-hover bg-zinc-900 p-8 rounded-2xl hover:bg-zinc-800 hover:border-purple-500/50 transition-all duration-300 border border-white/5">
-                      <div className="flex items-center gap-4 mb-4">
-                        <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full animate-scale-in" />
+                    <div key={idx} className="flex-shrink-0 w-72 sm:w-80 card-hover bg-zinc-900 p-4 sm:p-6 md:p-8 rounded-2xl hover:bg-zinc-800 hover:border-purple-500/50 transition-all duration-300 border border-white/5">
+                      <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                        <img src={testimonial.avatar} alt={testimonial.name} className="w-10 sm:w-12 h-10 sm:h-12 rounded-full animate-scale-in" />
                         <div>
-                          <div className="font-semibold text-white">{testimonial.name}</div>
-                          <div className="text-gray-500 text-sm">{testimonial.handle}</div>
+                          <div className="font-semibold text-white text-sm sm:text-base">{testimonial.name}</div>
+                          <div className="text-gray-500 text-xs sm:text-sm">{testimonial.handle}</div>
                         </div>
                       </div>
-                      <p className="text-gray-300 leading-relaxed hover:text-gray-100 transition-colors">{testimonial.text}</p>
+                      <p className="text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed hover:text-gray-100 transition-colors">{testimonial.text}</p>
                     </div>
                   ))}
                 </div>
               </div>
             </section>
 
-            <section className="py-20 px-6 bg-zinc-900">
+            <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-zinc-900">
               <div className="max-w-7xl mx-auto">
-                <div className="mb-12">
-                  <p className="text-purple-400 text-sm uppercase tracking-wider mb-4">Latest</p>
-                  <h2 className="text-5xl md:text-6xl font-bold">Updates</h2>
+                <div className="mb-8 sm:mb-12">
+                  <p className="text-purple-400 text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">Latest</p>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Updates</h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                   {[
                     { img: "https://framerusercontent.com/images/G2bGWS3fpuCWP0RHxsbNkhEwpY.jpeg?width=2400&height=1800", title: "How to build a top notch portfolio", date: "Jul 3, 2025" },
                     { img: "https://framerusercontent.com/images/UydfJ3QaCp68g0hszokz70rNuA.jpeg?width=2400&height=1800", title: "How to reach new clients as a designer", date: "Jun 1, 2025" }
@@ -855,19 +855,19 @@ const Portfolio = () => {
                       <div className="aspect-[16/10] overflow-hidden bg-zinc-900">
                         <img src={post.img} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                       </div>
-                      <div className="p-8">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-sm font-bold animate-glow-pulse">A</div>
-                          <div className="flex items-center gap-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                      <div className="p-4 sm:p-6 md:p-8">
+                        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                          <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-xs sm:text-sm font-bold animate-glow-pulse">A</div>
+                          <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
                             <span>Annet</span>
                             <span>•</span>
                             <span>{post.date}</span>
                           </div>
                         </div>
-                        <h3 className="text-2xl font-bold group-hover:text-purple-400 transition-colors mb-4">{post.title}</h3>
-                        <div className="flex items-center gap-2 text-purple-400 font-medium group-hover:text-pink-400 transition-colors">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold group-hover:text-purple-400 transition-colors mb-3 sm:mb-4">{post.title}</h3>
+                        <div className="flex items-center gap-2 text-xs sm:text-sm text-purple-400 font-medium group-hover:text-pink-400 transition-colors">
                           Read more
-                          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>
                     </div>
@@ -876,43 +876,43 @@ const Portfolio = () => {
               </div>
             </section>
 
-            <section className="py-20 px-6 bg-gradient-to-b from-zinc-900 to-black">
+            <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-zinc-900 to-black">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-sm uppercase tracking-wider text-purple-400 mb-6">let's connect</h2>
-                <h3 className="text-5xl md:text-6xl font-bold mb-12">Ready to create something awesome together?</h3>
+                <h2 className="text-xs uppercase tracking-wider text-purple-400 mb-4 sm:mb-6">let's connect</h2>
+                <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-8 sm:mb-12">Ready to create something awesome together?</h3>
                 <button 
                   onClick={() => setCurrentPage('contact')}
-                  className="magnetic-button group inline-flex items-center gap-3 px-10 py-5 bg-purple-600 text-white rounded-full font-semibold text-lg hover:bg-purple-500 hover:scale-105 transition-all duration-300"
+                  className="magnetic-button group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-purple-600 text-white rounded-full font-semibold text-xs sm:text-sm md:text-lg hover:bg-purple-500 hover:scale-105 transition-all duration-300"
                   onMouseMove={handleMagneticMove}
                   onMouseLeave={handleMagneticLeave}
                   style={{ transform: `translate(${magneticButtonPos.x}px, ${magneticButtonPos.y}px)` }}
                 >
                   Let's connect
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" size={24} />
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
               </div>
             </section>
 
-            <footer className="py-16 px-6 bg-black border-t border-zinc-800">
+            <footer className="py-12 sm:py-16 px-4 sm:px-6 bg-black border-t border-zinc-800">
               <div className="max-w-7xl mx-auto">
-                <div className="grid md:grid-cols-3 gap-12 mb-12">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6 sm:gap-12 mb-8 sm:mb-12">
                   <div>
-                    <h4 className="font-semibold mb-4">Pages</h4>
-                    <div className="space-y-2">
-                      <div onClick={() => setCurrentPage('about')} className="text-gray-400 hover:text-purple-400 cursor-pointer transition-colors">About</div>
-                      <div onClick={() => setCurrentPage('contact')} className="text-gray-400 hover:text-purple-400 cursor-pointer transition-colors">Contact</div>
+                    <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Pages</h4>
+                    <div className="space-y-1 sm:space-y-2">
+                      <div onClick={() => setCurrentPage('about')} className="text-xs sm:text-sm text-gray-400 hover:text-purple-400 cursor-pointer transition-colors">About</div>
+                      <div onClick={() => setCurrentPage('contact')} className="text-xs sm:text-sm text-gray-400 hover:text-purple-400 cursor-pointer transition-colors">Contact</div>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-4">Socials</h4>
-                    <div className="space-y-2">
-                      <a href="https://github.com/anilannet" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-purple-400 transition-colors">Github</a>
-                      <a href="https://www.linkedin.com/in/annetanilcse07/" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-purple-400 transition-colors">LinkedIn</a>
+                    <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Socials</h4>
+                    <div className="space-y-1 sm:space-y-2">
+                      <a href="https://github.com/anilannet" target="_blank" rel="noopener noreferrer" className="block text-xs sm:text-sm text-gray-400 hover:text-purple-400 transition-colors">Github</a>
+                      <a href="https://www.linkedin.com/in/annetanilcse07/" target="_blank" rel="noopener noreferrer" className="block text-xs sm:text-sm text-gray-400 hover:text-purple-400 transition-colors">LinkedIn</a>
                     </div>
                   </div>
                 </div>
-                <div className="text-center text-gray-500 text-sm border-t border-zinc-800 pt-8">
-                  <p className="mb-4">
+                <div className="text-center text-gray-500 text-xs sm:text-sm border-t border-zinc-800 pt-6 sm:pt-8">
+                  <p className="mb-2 sm:mb-4">
                     <a href="https://x.com/kuipermarc" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">Built by Annet</a>
                   </p>
                   <p>© Display. All rights reserved.</p>
@@ -923,36 +923,36 @@ const Portfolio = () => {
         )}
 
         {currentPage === 'contact' && (
-          <div className="min-h-screen bg-gradient-to-b from-[#0a0a14] via-[#1a1a2e] to-[#0f0f1e] text-white flex items-center justify-center px-6 relative overflow-hidden">
+          <div className="min-h-screen bg-gradient-to-b from-[#0a0a14] via-[#1a1a2e] to-[#0f0f1e] text-white flex items-center justify-center px-4 sm:px-6 relative overflow-hidden">
             <div className="absolute inset-0">
               <div className="absolute top-20 left-10 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
               <div className="absolute bottom-20 right-10 w-96 h-96 bg-violet-900/20 rounded-full blur-3xl"></div>
             </div>
             <div className="max-w-5xl w-full relative z-10">
-              <h1 className="text-7xl md:text-[120px] font-bold text-center mb-12 leading-none hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 hover:bg-clip-text transition-all duration-300 cursor-pointer">GET IN TOUCH</h1>
-              <p className="text-xl md:text-2xl text-center mb-20 text-gray-400 max-w-3xl mx-auto hover:text-gray-200 transition-colors duration-300">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-[120px] font-bold text-center mb-8 sm:mb-12 leading-none hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 hover:bg-clip-text transition-all duration-300 cursor-pointer">GET IN TOUCH</h1>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center mb-12 sm:mb-20 text-gray-400 max-w-3xl mx-auto hover:text-gray-200 transition-colors duration-300">
                 Whether you have a question, want to work together, or simply wish to say hello, I'm all ears.
               </p>
-              <div className="grid md:grid-cols-2 gap-12 mb-16">
-                <div className="p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
-                  <h3 className="text-xl mb-4 group-hover:text-purple-400 transition-colors">Business Inquiries</h3>
-                  <a href="mailto:anilannet@gmail.com" className="text-2xl hover:text-purple-400 transition-colors duration-300 font-semibold">anilannet@gmail.com</a>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-12 sm:mb-16">
+                <div className="p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
+                  <h3 className="text-base sm:text-lg md:text-xl mb-3 sm:mb-4 group-hover:text-purple-400 transition-colors">Business Inquiries</h3>
+                  <a href="mailto:anilannet@gmail.com" className="text-lg sm:text-xl md:text-2xl hover:text-purple-400 transition-colors duration-300 font-semibold break-all">anilannet@gmail.com</a>
                 </div>
-                <div className="p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
-                  <h3 className="text-xl mb-4 group-hover:text-purple-400 transition-colors">General</h3>
-                  <a href="mailto:anilannet@gmail.com" className="text-2xl hover:text-purple-400 transition-colors duration-300 font-semibold">anilannet@gmail.com</a>
+                <div className="p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
+                  <h3 className="text-base sm:text-lg md:text-xl mb-3 sm:mb-4 group-hover:text-purple-400 transition-colors">General</h3>
+                  <a href="mailto:anilannet@gmail.com" className="text-lg sm:text-xl md:text-2xl hover:text-purple-400 transition-colors duration-300 font-semibold break-all">anilannet@gmail.com</a>
                 </div>
               </div>
-              <div className="grid md:grid-cols-2 gap-12 mb-16">
-                <div className="p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
-                  <h3 className="text-xl mb-4 group-hover:text-purple-400 transition-colors">WhatsApp</h3>
-                  <button onClick={handleWhatsAppClick} className="text-2xl hover:text-purple-400 transition-colors duration-300 font-semibold">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-12 sm:mb-16">
+                <div className="p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
+                  <h3 className="text-base sm:text-lg md:text-xl mb-3 sm:mb-4 group-hover:text-purple-400 transition-colors">WhatsApp</h3>
+                  <button onClick={handleWhatsAppClick} className="text-lg sm:text-xl md:text-2xl hover:text-purple-400 transition-colors duration-300 font-semibold">
                     +971 50 536 7089
                   </button>
                 </div>
-                <div className="p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
-                  <h3 className="text-xl mb-4 group-hover:text-purple-400 transition-colors">LinkedIn</h3>
-                  <a href="https://www.linkedin.com/in/annetanilcse07/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-purple-400 transition-colors duration-300 font-semibold break-all">
+                <div className="p-4 sm:p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300 group">
+                  <h3 className="text-base sm:text-lg md:text-xl mb-3 sm:mb-4 group-hover:text-purple-400 transition-colors">LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/annetanilcse07/" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base md:text-lg hover:text-purple-400 transition-colors duration-300 font-semibold break-all">
                     https://www.linkedin.com/in/annetanilcse07/
                   </a>
                 </div>
@@ -967,46 +967,46 @@ const Portfolio = () => {
               <div className="absolute top-32 right-20 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
               <div className="absolute bottom-32 left-20 w-96 h-96 bg-violet-900/20 rounded-full blur-3xl"></div>
             </div>
-            <section className="min-h-screen flex items-center justify-end px-6 lg:px-24 pt-32 relative z-10">
-              <div className="max-w-2xl">
-                <h1 className="text-6xl md:text-8xl font-bold mb-12 animate-slide-in-left hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 hover:bg-clip-text transition-all duration-300 cursor-pointer">ABOUT</h1>
-                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed animate-fade-in-up animation-delay-300 hover:text-gray-200 transition-colors duration-300">
+            <section className="min-h-screen flex items-center justify-end px-4 sm:px-6 lg:px-24 pt-20 sm:pt-32 relative z-10">
+              <div className="max-w-2xl w-full">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-8 sm:mb-12 animate-slide-in-left hover:text-transparent hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-400 hover:bg-clip-text transition-all duration-300 cursor-pointer">ABOUT</h1>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed animate-fade-in-up animation-delay-300 hover:text-gray-200 transition-colors duration-300">
                   It's Annet. A digital creative, hailing 👋 with a passion for blending technology, design, and innovation, I turn ideas into{' '}
                   <span className="text-white font-semibold">code, design into experiences, and curiosity into innovation.</span>
                 </p>
               </div>
             </section>
 
-            <section className="py-32 px-6 lg:px-24">
-              <p className="text-purple-400 text-sm uppercase tracking-wider mb-8 animate-fade-in-up">PROJECTS</p>
-              <h2 className="text-5xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent animate-fade-in-up animation-delay-300">
+            <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-24">
+              <p className="text-purple-400 text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8 animate-fade-in-up">PROJECTS</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 sm:mb-12 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent animate-fade-in-up animation-delay-300">
                 BUS DRIVER BEHAVIOUR MANAGEMENT SYSTEM
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-4xl animate-fade-in-up animation-delay-600">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-4xl animate-fade-in-up animation-delay-600">
                 I have developed a IOT based Bus Driver System that helps track the speed of a bus and the distance at which it overtakes during traffic which helps control and evaluate the discipline of the bus driver during taxi.
               </p>
-              <p className="text-gray-400 mb-16 max-w-4xl leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-12 sm:mb-16 max-w-4xl leading-relaxed">
                 Components such as Ultrasonic Distance Sensor HC-SR04 Module, OLED Display, Raspberry Pi UNO RP2040 Development Board were used in the project.
               </p>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 max-w-3xl">
                 {[
                   { icon: '📡', label: 'IOT' },
                   { icon: '⏱️', label: 'Time tracking' },
                   { icon: '📊', label: 'Sensors' },
                   { icon: '📄', label: 'Reports' }
                 ].map((item, idx) => (
-                  <div key={idx} className="border border-white/20 rounded-xl py-4 px-6 text-center hover:bg-white/5 hover:border-purple-500/50 transition-all card-hover">
-                    <span className="text-2xl block mb-2">{item.icon}</span>
-                    <span className="text-sm font-medium">{item.label}</span>
+                  <div key={idx} className="border border-white/20 rounded-xl py-3 sm:py-4 px-3 sm:px-6 text-center hover:bg-white/5 hover:border-purple-500/50 transition-all card-hover">
+                    <span className="text-xl sm:text-2xl block mb-1 sm:mb-2">{item.icon}</span>
+                    <span className="text-xs sm:text-sm font-medium">{item.label}</span>
                   </div>
                 ))}
               </div>
             </section>
 
-            <section className="py-32 px-6 lg:px-24">
-              <p className="text-purple-400 text-sm uppercase tracking-wider mb-8 scroll-animate">ACHIEVEMENTS</p>
-              <h2 className="text-5xl md:text-6xl font-bold mb-16 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent scroll-animate">CERTIFICATIONS</h2>
+            <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-24">
+              <p className="text-purple-400 text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8 scroll-animate">ACHIEVEMENTS</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent scroll-animate">CERTIFICATIONS</h2>
               
               <div className="max-w-4xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
