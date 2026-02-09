@@ -683,39 +683,39 @@ const Portfolio = () => {
       )}
 
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${headerVisible ? 'translate-y-0' : '-translate-y-full'} bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-2xl`}>
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-6 flex items-center justify-between gap-1 sm:gap-2 md:gap-0 min-h-14 sm:min-h-16 md:min-h-20">
-          <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="text-xs sm:text-sm md:text-xl lg:text-2xl font-bold tracking-widest hover:text-purple-400 transition-colors text-white whitespace-nowrap flex-shrink-0">
+        <div className="max-w-7xl mx-auto px-2 sm:px-3 md:px-6 py-2 sm:py-3 md:py-6 flex items-center justify-between gap-0.5 sm:gap-1.5 md:gap-0 h-12 sm:h-14 md:h-20">
+          <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="text-xs sm:text-xs md:text-xl lg:text-2xl font-bold tracking-widest hover:text-purple-400 transition-colors text-white whitespace-nowrap flex-shrink-0">
             ANNET
           </button>
           
-          <div className="flex md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-1 sm:gap-2 md:gap-3 flex-shrink-0">
+          <div className="flex md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-0.5 sm:gap-1 md:gap-3 flex-shrink-0">
             <div className="group relative hidden sm:block">
-              <button onClick={() => { setCurrentPage('about'); window.scrollTo(0, 0); }} className="nav-icon-button h-9 sm:h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 shadow-lg hover:shadow-xl">
-                <div className="icon-inner flex-shrink-0"><User size={14} className="text-white" /></div>
+              <button onClick={() => { setCurrentPage('about'); window.scrollTo(0, 0); }} className="nav-icon-button h-8 sm:h-9 md:h-12 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 md:gap-3 px-1.5 sm:px-2 md:px-4 shadow-lg hover:shadow-xl">
+                <div className="icon-inner flex-shrink-0"><User size={12} className="text-white sm:block hidden" /></div>
                 <span className="label-tooltip text-white flex-1 text-center text-xs md:text-sm">About</span>
               </button>
             </div>
             <div className="group relative hidden sm:block">
-              <button onClick={() => { setCurrentPage('contact'); window.scrollTo(0, 0); }} className="nav-icon-button h-9 sm:h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 shadow-lg hover:shadow-xl">
-                <div className="icon-inner flex-shrink-0"><Mail size={14} className="text-white" /></div>
+              <button onClick={() => { setCurrentPage('contact'); window.scrollTo(0, 0); }} className="nav-icon-button h-8 sm:h-9 md:h-12 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 md:gap-3 px-1.5 sm:px-2 md:px-4 shadow-lg hover:shadow-xl">
+                <div className="icon-inner flex-shrink-0"><Mail size={12} className="text-white sm:block hidden" /></div>
                 <span className="label-tooltip text-white flex-1 text-center text-xs md:text-sm">Contact</span>
               </button>
             </div>
             <div className="group relative">
-              <button onClick={handleWhatsAppClick} className="nav-icon-button h-9 sm:h-10 md:h-12 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-1 sm:gap-2 md:gap-3 px-2 sm:px-3 md:px-4 shadow-lg hover:shadow-xl flex-shrink-0">
-                <div className="icon-inner flex-shrink-0"><MessageCircle size={14} className="text-white" /></div>
-                <span className="label-tooltip text-white flex-1 text-center text-xs md:text-sm whitespace-nowrap">Get In Touch</span>
+              <button onClick={handleWhatsAppClick} className="nav-icon-button h-8 sm:h-9 md:h-12 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 hover:border-white/30 transition-all duration-300 flex items-center justify-center gap-0.5 sm:gap-1.5 md:gap-3 px-1.5 sm:px-2 md:px-4 shadow-lg hover:shadow-xl flex-shrink-0">
+                <div className="icon-inner flex-shrink-0"><MessageCircle size={12} className="text-white" /></div>
+                <span className="label-tooltip text-white flex-1 text-center text-xs md:text-sm whitespace-nowrap hidden sm:inline">Touch</span>
               </button>
             </div>
           </div>
 
-          <button onClick={handleWhatsAppClick} className="hidden md:block px-5 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white hover:text-black rounded-xl font-semibold transition-all duration-300 border border-white/20 text-white text-xs md:text-sm flex-shrink-0">
+          <button onClick={handleWhatsAppClick} className="hidden md:block px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white hover:text-black rounded-lg md:rounded-xl font-semibold transition-all duration-300 border border-white/20 text-white text-xs md:text-sm flex-shrink-0">
             Get In Touch
           </button>
         </div>
       </nav>
 
-      <div className="pt-16">
+      <div className="pt-12 sm:pt-14 md:pt-20">
         {currentPage === 'home' && (
           <div className="min-h-screen bg-black text-white">
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -732,19 +732,19 @@ const Portfolio = () => {
               <div className="absolute bottom-1/3 left-1/4 w-2 h-2 particle particle-3" style={{bottom: '25%', left: '10%'}}></div>
               <div className="absolute top-2/3 right-1/3 w-2 h-2 particle particle-1" style={{top: '65%', right: '20%'}}></div>
 
-              <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
-                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[160px] xl:text-[200px] font-black mb-6 sm:mb-8 leading-none tracking-tight">
+              <div className="relative z-10 max-w-6xl mx-auto px-3 sm:px-4 md:px-6 text-center py-4 sm:py-0">
+                <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[140px] font-black mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight sm:leading-none tracking-tight">
                   <span className="inline-block relative group">
                     <span className="hero-text-professional hero-digital-word block">DIGITAL</span>
                     <span className="hero-text-professional hero-designer-word block">DESIGNER</span>
                     <div className="hero-line-premium group-hover:animate-none"></div>
                   </span>
                 </h1>
-                <p className="text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl mb-8 sm:mb-12 max-w-4xl mx-auto hero-description text-gray-300 px-2">
+                <p className="text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl mb-4 sm:mb-6 md:mb-8 lg:mb-12 max-w-4xl mx-auto hero-description text-gray-300 px-1 sm:px-2">
                   Turning Your Ideas Into Code, Design Into Experiences, And Curiosity Into Innovation.
                 </p>
                 <button 
-                  className="hero-button magnetic-button inline-flex items-center gap-2 px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-lg rounded-full border border-purple-500/50 font-semibold text-xs sm:text-sm md:text-lg hover:from-purple-600/60 hover:to-pink-600/60 transition-all duration-300"
+                  className="hero-button magnetic-button inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-lg rounded-full border border-purple-500/50 font-semibold text-xs sm:text-xs md:text-base lg:text-lg hover:from-purple-600/60 hover:to-pink-600/60 transition-all duration-300"
                   onMouseMove={handleMagneticMove}
                   onMouseLeave={handleMagneticLeave}
                   style={{ transform: `translate(${magneticButtonPos.x}px, ${magneticButtonPos.y}px)` }}
