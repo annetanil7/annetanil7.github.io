@@ -30,9 +30,15 @@ jobs:
       
       - name: Move dist contents to root
         run: |
+          # Backup source index.html
+          mv index.source.html index.html.backup 2>/dev/null || true
+          # Remove old built files
+          rm -f index.html vite.svg
           rm -rf assets
+          # Copy new built files
           cp -r dist/* .
-          rm -rf dist
+          # Restore source index for development
+          mv index.html.backup index.source.html 2>/dev/null || true
       
       - name: Commit and push
         run: |
