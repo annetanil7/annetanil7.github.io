@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowRight, User, Mail, MessageCircle } from 'lucide-react';
+import LoadingScreen from './components/LoadingScreen';
+import PageDoodles from './components/PageDoodles';
 
 const Portfolio = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
@@ -13,6 +16,13 @@ const Portfolio = () => {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [mouseInside, setMouseInside] = useState(false);
   const containerRef = useRef(null);
+
+  console.log('isLoading state:', isLoading);
+
+  const handleLoadComplete = () => {
+    console.log('Load complete called');
+    setIsLoading(false);
+  };
 
   useEffect(() => {
     const observerOptions = { threshold: 0.2, rootMargin: '0px 0px -100px 0px' };
@@ -133,7 +143,11 @@ const Portfolio = () => {
   ];
 
   return (
-    <div ref={containerRef} className="font-sans antialiased overflow-hidden relative bg-black min-h-screen">
+    <>
+      {isLoading && <LoadingScreen onLoadComplete={handleLoadComplete} />}
+      {!isLoading && <PageDoodles page={currentPage} />}
+      
+      <div ref={containerRef} className="font-sans antialiased overflow-hidden relative bg-black min-h-screen">
       <style>{`
         @keyframes fade-in-up {
           from { opacity: 0; transform: translateY(30px); }
@@ -715,6 +729,9 @@ const Portfolio = () => {
         </div>
       </nav>
 
+      {/* Page Doodles */}
+      {!isLoading && <PageDoodles page={currentPage} />}
+
       <div className="pt-12 sm:pt-14 md:pt-20">
         {currentPage === 'home' && (
           <div className="min-h-screen bg-black text-white">
@@ -1136,6 +1153,7 @@ const Portfolio = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
