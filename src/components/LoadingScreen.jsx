@@ -5,8 +5,6 @@ const LoadingScreen = ({ onLoadComplete }) => {
   const [progress, setProgress] = useState(0);
   const [isZooming, setIsZooming] = useState(false);
 
-  console.log('LoadingScreen rendered, progress:', progress);
-
   useEffect(() => {
     // Simulate loading progress
     const interval = setInterval(() => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowRight, User, Mail, MessageCircle } from 'lucide-react';
-import LoadingScreen from './components/LoadingScreen';
-import PageDoodles from './components/PageDoodles';
+import LoadingScreen from './components/LoadingScreen.jsx';
+import PageDoodles from './components/PageDoodles.jsx';
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,10 +17,7 @@ const Portfolio = () => {
   const [mouseInside, setMouseInside] = useState(false);
   const containerRef = useRef(null);
 
-  console.log('isLoading state:', isLoading);
-
   const handleLoadComplete = () => {
-    console.log('Load complete called');
     setIsLoading(false);
   };
 
